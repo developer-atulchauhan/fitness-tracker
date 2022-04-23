@@ -18,6 +18,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './tranning/current-tranning/stop-training.component';
+import { AuthService } from './auth/auth.service';
+import { TrainingService } from './tranning/training.service';
 
 
 
@@ -44,7 +46,7 @@ import { StopTrainingComponent } from './tranning/current-tranning/stop-training
     AppRoutingModule,
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [AuthService,TrainingService],
   
   bootstrap: [AppComponent],
   entryComponents:[StopTrainingComponent]
