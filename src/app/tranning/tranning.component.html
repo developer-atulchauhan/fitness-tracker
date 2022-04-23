@@ -1,1 +1,9 @@
-<p>tranning works!</p>
+<mat-tab-group *ngIf="!ongoingTraining">
+  <mat-tab label="New Exercise">
+    <app-new-tranning (trainingStart)="ongoingTraining = true"></app-new-tranning>
+  </mat-tab>
+  <mat-tab label="Past Exercises">
+    <app-past-tranning></app-past-tranning>
+  </mat-tab>
+</mat-tab-group>
+<app-current-tranning *ngIf="ongoingTraining"></app-current-tranning>

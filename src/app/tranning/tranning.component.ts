@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tranning.component.css']
 })
 export class TranningComponent implements OnInit {
-
+  ongoingTraining = false;
   constructor() { }
 
   ngOnInit(): void {

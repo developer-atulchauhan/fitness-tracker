@@ -15,6 +15,9 @@ import { NewTranningComponent } from './tranning/new-tranning/new-tranning.compo
 import { PastTranningComponent } from './tranning/past-tranning/past-tranning.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './auth/login/login.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { StopTrainingComponent } from './tranning/current-tranning/stop-training.component';
 
 
 
@@ -27,7 +30,10 @@ import { LoginComponent } from './auth/login/login.component';
     NewTranningComponent,
     PastTranningComponent,
     WelcomeComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    SidenavListComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +42,11 @@ import { LoginComponent } from './auth/login/login.component';
     ReactiveFormsModule,
     MaterialModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  
+  bootstrap: [AppComponent],
+  entryComponents:[StopTrainingComponent]
 })
 export class AppModule { }
