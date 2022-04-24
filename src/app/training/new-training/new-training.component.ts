@@ -3,12 +3,13 @@ import { NgForm } from '@angular/forms';
 
 import { TrainingService } from '../training.service';
 import { Exercise } from '../exercise.model';
+
 @Component({
-  selector: 'app-new-tranning',
-  templateUrl: './new-tranning.component.html',
-  styleUrls: ['./new-tranning.component.css']
+  selector: 'app-new-training',
+  templateUrl: './new-training.component.html',
+  styleUrls: ['./new-training.component.css']
 })
-export class NewTranningComponent implements OnInit {
+export class NewTrainingComponent implements OnInit {
   exercises: Exercise[] = [];
 
   constructor(private trainingService: TrainingService) { }
@@ -20,4 +21,5 @@ export class NewTranningComponent implements OnInit {
   onStartTraining(form: NgForm) {
     this.trainingService.startExercise(form.value.exercise);
   }
+
 }
