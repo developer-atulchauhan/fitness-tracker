@@ -21,6 +21,8 @@ export class SidenavListComponent implements OnInit, OnDestroy {
   }
 
   onClose() {
+    debugger
+
     this.closeSidenav.emit();
   }
 
