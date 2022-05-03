@@ -12,6 +12,9 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { NewTrainingComponent } from './training/new-training/new-training.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -21,7 +24,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
-
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -46,6 +49,9 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [AuthService,TrainingService],
   
